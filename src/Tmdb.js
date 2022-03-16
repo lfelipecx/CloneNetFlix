@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 const API_KEY = 'ff237790b8b1981daa378a3d77ebb66a';
 const API_BASE = 'https://api.themoviedb.org/3';
 
@@ -66,6 +67,26 @@ export default {
                 title: 'Guerra',
                 items: await basicFetch (`/discover/movie?with_generes=10752&language=pt-BR&api_key=${API_KEY}`)
             }
-        ]
+        ];
+    },
+    getMovieInfo: async (movieId, type) => {
+        let info = {};
+
+        if(movieId){
+            switch(type){
+                case 'movie':
+                    info = await basicFetch (`/movie/${movieId}?language=pt-BR&api_key=${API_KEY}`);
+                break;
+                case 'tv':
+                    info = await basicFetch (`/tv/${movieId}?language=pt-BR&api_key=${API_KEY}`);;
+                break;
+                default:
+                    info = null;
+                break;
+            }
+        }
+
+
+        return info;
     }
 }
