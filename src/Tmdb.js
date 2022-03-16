@@ -1,4 +1,3 @@
-/* eslint-disable import/no-anonymous-default-export */
 const API_KEY = 'ff237790b8b1981daa378a3d77ebb66a';
 const API_BASE = 'https://api.themoviedb.org/3';
 
@@ -62,6 +61,11 @@ export default {
                 title: 'Documentários',
                 items: await basicFetch (`/discover/movie?with_generes=99&language=pt-BR&api_key=${API_KEY}`)
             },
+            {
+                slug: 'war',
+                title: 'Guerra',
+                items: await basicFetch (`/discover/movie?with_generes=10752&language=pt-BR&api_key=${API_KEY}`)
+            }
         ]
     }
 }
