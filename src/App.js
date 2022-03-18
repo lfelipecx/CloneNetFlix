@@ -1,4 +1,3 @@
-/* eslint-disable import/no-anonymous-default-export */
 import React, {useEffect, useState} from "react";
 import './App.css';
 import Tmdb from "./Tmdb";
@@ -61,6 +60,12 @@ export default () => {
           <MovieRow key={key} title={item.title} items={item.items} />
         ))}
       </section>
+
+      <footer>
+        Feito com <span role="img" aria-label="coração">♥</span> por Luiz Felipe<br />
+        Direitos de imagem para Netflix<br />
+        Dados coletados do site Themoviedb.org
+      </footer>
     </div>
   );
 
