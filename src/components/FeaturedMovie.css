@@ -44,14 +44,14 @@
     font-size: 20px;
     color: #999;
     max-width: 40%;
-    /* testando ajuste na descrição com css*/
-    /* 
+    
+    /* ajustando quantidade de linhas na descrição */
     overflow: hidden;
-    text-overflow: ellipsis; /*Adicionando "..." ao final
+    text-overflow: ellipsis; /*Adicionando "..." ao final*/
     display: -webkit-box;
-    -webkit-line-clamp: 5; /*Quantidade de linhas
+    -webkit-line-clamp: 5; /*Quantidade de linhas*/
     -webkit-box-orient: vertical;
-    */
+    
 }
 
 .featured--buttons{
